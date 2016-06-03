@@ -7,7 +7,7 @@
  */
 
 
-function connection(){
+function createConnection(){
     return mysqli_connect("localhost:8889","root","root","JSPFinalProject");
 }
 

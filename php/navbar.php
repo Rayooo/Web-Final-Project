@@ -5,6 +5,7 @@
  * Date: 16/6/3
  * Time: 13:58
  */
+include "util.php";
 ?>
 <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
 <script src="../sweetalert/dist/sweetalert-dev.js"></script>
@@ -27,9 +28,13 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <?php
-                    $userNameNavBar = isset($_SESSION["userName"])? null:$_SESSION["userName"];
+                    if(isset($_SESSION["userName"])){
+                        $userNameNavBar = $_SESSION["userName"];
+                    }else{
+                        $userNameNavBar = null;
+                    }
                     if($userNameNavBar == null){
-                        echo "<button type='button' class='btn btn-primary navbar-btn' data-toggle='modal' data-target='#loginModal'>登陆</button>";
+                        echo "<button type='button' style='margin-right: 3px' class='btn btn-primary navbar-btn' data-toggle='modal' data-target='#loginModal'>登陆</button>";
                         echo "<a type='button' class='btn btn-primary navbar-btn' href='register.php'>注册</a>";
                     }else{
                         $isManager = isset($_SESSION["isManager"])? null:$_SESSION["isManager"];
