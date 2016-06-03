@@ -38,11 +38,11 @@ include "util.php";
                         echo "<a type='button' class='btn btn-primary navbar-btn' href='register.php'>注册</a>";
                     }else{
                         if(isset($_SESSION["isManager"])){
-                            $isManager = $_SESSION["isManager"];
+                            $isManagerNavBar = $_SESSION["isManager"];
                         }else{
-                            $isManager = null;
+                            $isManagerNavBar = null;
                         }
-                        if($isManager == 1) {
+                        if($isManagerNavBar == 1) {
                             echo "<a type='button' class='btn btn-primary navbar-btn' href='logout.php'>退出</a>";
                             echo "<li class='naviButton' id='navIndex'><a href='index.php'>主页</a></li>";
 

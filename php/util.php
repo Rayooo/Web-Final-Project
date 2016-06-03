@@ -19,34 +19,40 @@ function closeConnection($connection){
 function confirmationLogin(){
     if(!isset($_SESSION["userName"])){
         $url = 'index.php';
-        echo "<script>location.href='$url'<script>";
+        echo "<script>location.href='$url'</script>";
     }
 }
 
 function confirmationManager(){
     if(!isset($_SESSION["userName"]) || !isset($_SESSION["isManager"]) || $_SESSION["isManager"] != 1){
         $url = 'index.php';
-        echo "<script>location.href='$url'<script>";
+        echo "<script>location.href='$url'</script>";
     }
 }
 
 function confirmationUser(){
     if(!isset($_SESSION["userName"]) || !isset($_SESSION["isManager"]) ||  $_SESSION["isManager"] != 0){
         $url = 'index.php';
-        echo "<script>location.href='$url'<script>";
+        echo "<script>location.href='$url'</script>";
     }
 }
 //以下三个在后端判断
 function isLogin(){
-    return isset($_SESSION["isPassed"]) && $_SESSION["isPassed"] == 1;
+    if( !isset($_SESSION["isPassed"]) || $_SESSION["isPassed"] == 0){
+        die;
+    }
 }
 
 function isManager(){
-    return isset($_SESSION["isPassed"]) && $_SESSION["isManager"] && $_SESSION["isPassed"] == 1 && $_SESSION["isManager"] == 1;
+    if (!isset($_SESSION["isPassed"]) || !isset($_SESSION["isManager"]) || $_SESSION["isPassed"] != 1 || $_SESSION["isManager"] != 1){
+        die;
+    }
 }
 
 function isUser(){
-    return isset($_SESSION["isPassed"]) && $_SESSION["isManager"] && $_SESSION["isPassed"] == 1 && $_SESSION["isManager"] == 0;
+    if (!isset($_SESSION["isPassed"]) || !isset($_SESSION["isManager"]) || $_SESSION["isPassed"] != 1 || $_SESSION["isManager"] != 0){
+        die;
+    }
 }
 
 function getSQLDateTime(){
