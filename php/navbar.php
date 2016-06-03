@@ -37,7 +37,11 @@ include "util.php";
                         echo "<button type='button' style='margin-right: 3px' class='btn btn-primary navbar-btn' data-toggle='modal' data-target='#loginModal'>登陆</button>";
                         echo "<a type='button' class='btn btn-primary navbar-btn' href='register.php'>注册</a>";
                     }else{
-                        $isManager = isset($_SESSION["isManager"])? null:$_SESSION["isManager"];
+                        if(isset($_SESSION["isManager"])){
+                            $isManager = $_SESSION["isManager"];
+                        }else{
+                            $isManager = null;
+                        }
                         if($isManager == 1) {
                             echo "<a type='button' class='btn btn-primary navbar-btn' href='logout.php'>退出</a>";
                             echo "<li class='naviButton' id='navIndex'><a href='index.php'>主页</a></li>";
@@ -148,7 +152,7 @@ include "util.php";
         var userName = $("#userNameNavBar").val();
         var password = $("#passwordNavBar").val();
         if( !!userName && !!password){
-            $.post("/login",{userNameNavBar:userName,passwordNavBar:password},function (data) {
+            $.post("login.php",{userNameNavBar:userName,passwordNavBar:password},function (data) {
                 if(data == "success"){
                     location.reload();
                 }

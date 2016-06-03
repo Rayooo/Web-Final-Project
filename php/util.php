@@ -54,4 +54,10 @@ function getSQLDateTime(){
     return date("Y-m-d H:i:s");
 }
 
+function redirect($url){
+    echo "<script>location.href='$url'</script>";
+}
+
+
+
 ?>
