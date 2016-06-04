@@ -25,7 +25,7 @@ if(!empty($_FILES["image"]["tmp_name"])){
     $now = date("YmdHis");
     $randNum = rand(10000,99999);
     $newName = $now.$randNum.".".end($uploadFileType);
-    $imageURL = "../upload/headImage/" . $newName;
+    $imageURL = "../upload/headImage/".$newName;
     move_uploaded_file($_FILES["image"]["tmp_name"], $imageURL);
 
     $sql = "UPDATE user SET userName='$userName',password='$password',sex=$sex,name='$name',introduction='$introduction',headImage='$imageURL',mobile='$mobile' WHERE id=$id";
