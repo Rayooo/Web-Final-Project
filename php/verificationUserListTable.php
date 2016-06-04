@@ -48,7 +48,7 @@ if($result -> num_rows > 0){
     }
     echo "</table></div>";
 }else{
-    echo "<div class='container alert alert-warning text-center' role='alert'>未查询到信息</div>";
+    echo "<div class='container alert alert-warning text-center' role='alert'>暂时没有新用户注册申请</div>";
 }
 closeConnection($connection);
 ?>

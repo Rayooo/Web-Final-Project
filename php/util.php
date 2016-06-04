@@ -39,19 +39,19 @@ function confirmationUser(){
 //以下三个在后端判断
 function isLogin(){
     if( !isset($_SESSION["isPassed"]) || $_SESSION["isPassed"] == 0){
-        die;
+        die();
     }
 }
 
 function isManager(){
     if (!isset($_SESSION["isPassed"]) || !isset($_SESSION["isManager"]) || $_SESSION["isPassed"] != 1 || $_SESSION["isManager"] != 1){
-        die;
+        die();
     }
 }
 
 function isUser(){
     if (!isset($_SESSION["isPassed"]) || !isset($_SESSION["isManager"]) || $_SESSION["isPassed"] != 1 || $_SESSION["isManager"] != 0){
-        die;
+        die();
     }
 }
 
