@@ -107,7 +107,7 @@ if($existCommentResult -> num_rows > 0){
     $isExistComment = $existCommentRow["count(id)"] > 0;
 }
 //如果没有评论则输出提示语句,有评论则输出内容
-if($isExistComment){
+if(!$isExistComment){
     echo "<div class='alert alert-info' role='alert'>暂时还没有评论,快来添加第一个评论吧</div>";
 }else{
     $connection = createConnection();
@@ -125,8 +125,8 @@ if($isExistComment){
                 $userRow = $userResult -> fetch_assoc();
                 $commentUserName = $userRow["name"];
                 $commentHeadImage = $userRow["headImage"];
-                $newsComment = $userRow["content"];
-                $commentCreateTime = $userRow["createTime"];
+                $newsComment = $row["content"];
+                $commentCreateTime = $row["createTime"];
                 ?>
                 <div class="media" style="margin-top: 3%;margin-bottom: 3%" id="comment<? echo $commentId?>">
                     <div class="media-left media-middle">
@@ -247,7 +247,7 @@ if($isExistComment){
         var newsId = <? echo $newsId?>;
         var newsComment = $("#newsComment").val();
         if(newsComment.length>0){
-            $.post("addNewsComment.php",{newsId:newsId,newsComment:newsComment},function (data) {
+            $.post("addNewsCommentPost.php",{newsId:newsId,newsComment:newsComment},function (data) {
                 if(data == "success"){
                     swal({
                         title: "成功",

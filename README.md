@@ -144,7 +144,7 @@ CREATE INDEX achievementIdIndex ON achievementComment(achievementId);
 CREATE INDEX newsIdIndex ON newsComment(newsId);
 
 INSERT INTO user (userName, password, headImage, sex, name, createTime, mobile, introduction, isManager, isDeleted, isPassed)
-VALUES("1","1","image/headImage.png",0,"Ray","2016-05-16 20:02:05","1050123","asd",1,0,1);
+VALUES("1","1","../image/headImage.png",0,"Ray","2016-05-16 20:02:05","1050123","asd",1,0,1);
 
 INSERT INTO user (userName, password, headImage, sex, name, createTime, mobile, introduction, isManager, isDeleted, isPassed)
-VALUES("2","2","image/headImage.png",0,"Ray","2016-05-16 20:02:05","1050123","asd",0,0,1);
+VALUES("2","2","../image/headImage.png",0,"Ray","2016-05-16 20:02:05","1050123","asd",0,0,1);
