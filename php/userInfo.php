@@ -65,7 +65,7 @@ closeConnection($connection);
 
     <div class="form-group"  id="headImageDiv">
         <div class="col-md-6" id="headImageDiv2">
-            <img id="preview" src="../<? echo $headImage?>" alt="...">
+            <img id="preview" src="<? echo $headImage?>" alt="...">
         </div>
     </div>
 

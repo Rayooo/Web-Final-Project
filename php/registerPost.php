@@ -17,7 +17,7 @@ $message = "服务器异常";
 $createTime = getSQLDateTime();
 
 $sql = "INSERT INTO user (userName, password, name, createTime, isManager, headImage)".
-    "VALUES('$userName','$password','$name','$createTime',$isManager,'image/headImage.png')";
+    "VALUES('$userName','$password','$name','$createTime',$isManager,'../image/headImage.png')";
 $connection = createConnection();
 if($connection -> query($sql) == true){
     $isError = false;

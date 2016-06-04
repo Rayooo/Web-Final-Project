@@ -85,7 +85,7 @@ closeConnection($connection);
 
         <div class="form-group"  id="headImageDiv">
             <div class="col-md-6" id="headImageDiv2">
-                <img id="preview" src="../<? echo $headImage ?>">
+                <img id="preview" src="<? echo $headImage ?>">
                 <div class="caption">
                     <input type="file" accept="image/*" name="image" id="uploadImage">
                 </div>

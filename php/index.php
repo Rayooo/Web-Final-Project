@@ -157,7 +157,7 @@ session_start();
                                 ?>
                                 <div class="media" style="margin-top: 3%">
                                     <div class="media-left media-middle">
-                                        <img class="media-object commentAvatarImage" src="../<?php echo $userRow["headImage"] ?>">
+                                        <img class="media-object commentAvatarImage" src="<?php echo $userRow["headImage"] ?>">
                                     </div>
                                     <div class="media-body">
                                         <h4 class="media-heading"><?php echo $userRow["name"] ?></h4>
