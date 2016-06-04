@@ -162,7 +162,7 @@ session_start();
                                     <div class="media-body">
                                         <h4 class="media-heading"><?php echo $userRow["name"] ?></h4>
                                         <h5>发表成果数:<?php echo $row["count(id)"]?></h5>
-                                        <?php echo $userRow["introduction"] == null? "":$userResult["introduction"]?>
+                                        <?php echo $userRow["introduction"] == null? "":$userRow["introduction"]?>
                                     </div>
                                 </div>
                     <?php
