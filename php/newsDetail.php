@@ -180,7 +180,7 @@ if($isExistComment){
     $("#previousNews").click(function () {
         $.post("previousNextNews.php",{choice:"previous",currentNewsId:'<? echo $newsId?>'},function (data) {
             if(data != "noNews" && data != "null"){
-                location.href = "newsDetail.jsp?newsId="+data;
+                location.href = "newsDetail.php?newsId="+data;
             }
             else if(data == "noNews"){
                 swal("警告", "没有文章了", "warning");
@@ -195,7 +195,7 @@ if($isExistComment){
     $("#nextNews").click(function () {
         $.post("previousNextNews.php",{choice:"next",currentNewsId:'<? echo $newsId?>'},function (data) {
             if(data != "noNews" && data != "null"){
-                location.href = "newsDetail.jsp?newsId="+data;
+                location.href = "newsDetail.php?newsId="+data;
             }
             else if(data == "noNews"){
                 swal("警告", "没有文章了", "warning");
