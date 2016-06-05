@@ -7,6 +7,7 @@
  */
 session_start();
 include "util.php";
+isUser();
 
 $title = $_REQUEST["achievementTitle"];
 $content = $_REQUEST["achievementContent"];

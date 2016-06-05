@@ -81,7 +81,7 @@ if($result -> num_rows > 0){
             confirmButtonText: "删除",
             closeOnConfirm: false
         }, function(){
-            $.post("deleteAchievement.php",{achievementId:achievementId},function (data) {
+            $.post("deleteAchievementPost.php",{achievementId:achievementId},function (data) {
                 if(data == "success"){
                     swal("成功", "已删除该成果", "success");
                     $("#tr"+achievementId).addClass("danger");
