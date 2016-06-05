@@ -52,6 +52,11 @@ if(!empty($_FILES["image"]["tmp_name"])){
     //    更新失败
         ?>
         <script>
+            var url = document.referrer;
+            var rawIndex = url.substring(url.lastIndexOf('/'));
+            var indexArr = rawIndex.split('?');
+            var preLocation = indexArr[0];
+
             swal({
                 title: "对不起",
                 text: "更新信息失败",
@@ -60,7 +65,11 @@ if(!empty($_FILES["image"]["tmp_name"])){
                 confirmButtonText: "确定",
                 closeOnConfirm: false
             }, function(){
-                window.close();
+                if(preLocation == "/userInfoEdit.php"){
+                    window.close();
+                }else if(preLocation == "/editMyInfo.php"){
+                    window.location = "editMyInfo.php";
+                }
             });
         </script>
     <?
@@ -68,6 +77,11 @@ if(!empty($_FILES["image"]["tmp_name"])){
     //    更新成功
     ?>
         <script>
+            var url = document.referrer;
+            var rawIndex = url.substring(url.lastIndexOf('/'));
+            var indexArr = rawIndex.split('?');
+            var preLocation = indexArr[0];
+
             swal({
                 title: "成功",
                 text: "更新信息成功",
@@ -76,7 +90,11 @@ if(!empty($_FILES["image"]["tmp_name"])){
                 confirmButtonText: "确定",
                 closeOnConfirm: false
             }, function(){
-                window.close();
+                if(preLocation == "/userInfoEdit.php"){
+                    window.close();
+                }else if(preLocation == "/editMyInfo.php"){
+                    window.location = "editMyInfo.php";
+                }
             });
         </script>
         <?
