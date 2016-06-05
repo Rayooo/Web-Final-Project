@@ -92,7 +92,7 @@ session_start();
                         if($result -> num_rows > 0){
                             while($row = $result->fetch_assoc()){
                                 ?>
-                                <a href="newsDetail.php?newsId=<?php echo $row["id"] ?>" class="list-group-item"><?php echo $row["title"] ?><span style="float: right"><?php echo $row["createTime"] ?>  <?php echo $row["createTime"] ?></span></a>
+                                <a href="newsDetail.php?newsId=<?php echo $row["id"] ?>" class="list-group-item"><?php echo $row["title"] ?><span style="float: right"><?php echo $row["createTime"] ?></span></a>
                                 <?php
                             }
                         }
@@ -118,7 +118,7 @@ session_start();
                         if($result -> num_rows > 0){
                             while ($row = $result->fetch_assoc()){
                                 ?>
-                                <a href="achievementDetail.php?achievementId=<?php echo $row["id"] ?>" class="list-group-item"><?php echo $row["title"] ?><span style="float: right"><?php echo $row["createTime"] ?>  <?php echo $row["createTime"] ?></span></a>
+                                <a href="achievementDetail.php?achievementId=<?php echo $row["id"] ?>" class="list-group-item"><?php echo $row["title"] ?><span style="float: right"><?php echo $row["createTime"] ?></span></a>
                                 <?php
                             }
                         }
