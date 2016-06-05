@@ -161,7 +161,8 @@ closeConnection($connection);
                                         </div>
                                         <div class="media-body">
                                             <?
-                                            if(isset($_SESSION["userName"]) && ( $commentUserId == $_SESSION["userId"] || $_SESSION["isManager"] == 1 )){
+                                            //管理员和发布该成果的用户有权删除所有评论,其余的用户指能删除自己的评论
+                                            if(isset($_SESSION["userName"]) && ( $commentUserId == $_SESSION["userId"] || $_SESSION["isManager"] == 1 || $achievementAuthor == $_SESSION["userId"])){
                                                 echo "<button class='btn btn-danger deleteButton' id='delete$commentId' style='float: right'>删除</button>";
                                             }
                                             ?>
