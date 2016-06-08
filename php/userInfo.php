@@ -30,7 +30,6 @@ include "util.php";
         border-radius: 50%;
         -moz-border-radius: 50%;
         -webkit-border-radius: 50%;
-        transition: linear 0.25s;
     }
 </style>
 <?php
