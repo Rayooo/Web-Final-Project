@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Ray
- * Date: 16/6/5
- * Time: 12:57
+ * User: niqianye
+ * Date: 16/6/2
+ * Time: 14:30
  */
 session_start();
 include "util.php";

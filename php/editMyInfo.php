@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Ray
- * Date: 16/6/5
- * Time: 11:14
+ * User: niqianye
+ * Date: 16/5/26
+ * Time: 20:56
  */
 session_start();
 ?>

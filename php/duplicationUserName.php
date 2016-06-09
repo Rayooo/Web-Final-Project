@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Ray
- * Date: 16/6/3
- * Time: 20:17
+ * User: niqianye
+ * Date: 16/5/25
+ * Time: 22:01
  */
 include "util.php";
 $userName = $_REQUEST["userName"];
