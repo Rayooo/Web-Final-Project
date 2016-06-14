@@ -123,7 +123,7 @@ closeConnection($connection);
     $("#next").click(function () {
         if(currentPage < <? echo $count ?>){
             currentPage += 1;
-            console.log(currentPage);
+//            console.log(currentPage);
             $(".paging").removeClass("active");
             $("#paging" + currentPage).addClass("active");
             $.post("searchAchievementTable.php", {page:currentPage}, function (data) {

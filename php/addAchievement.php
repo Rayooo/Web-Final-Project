@@ -67,7 +67,6 @@ confirmationUser();
         }
         else{
             $.post("addAchievementPost.php", {achievementContent:achievementContent,userId:userId,achievementTitle:achievementTitle}, function (data) {
-                console.log(data);
                 if(data == "success"){
                     swal({
                         title: "成功",

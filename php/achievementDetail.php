@@ -110,6 +110,7 @@ closeConnection($connection);
 <!--成果内容-->
 <div class="container" id="achievementBackground"><? echo $achievementContent ?></div>
 
+<!--s上一篇下一篇-->
 <div class="container" style="margin-top: 5%;margin-bottom: 5%">
     <a id="previousAchievement" type="button" class="btn btn-info btn-lg">上一篇</a>
     <a id="nextAchievement" type="button" class="btn btn-info btn-lg" style="float: right">下一篇</a>
