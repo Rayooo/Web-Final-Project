@@ -12,7 +12,7 @@ $password = $_REQUEST["passwordNavBar"];
 $isPassed = 0;
 
 $connection = createConnection();
-$sql = "SELECT * FROM user WHERE userName=$userName AND password=$password AND user.isDeleted=0 ";
+$sql = "SELECT * FROM user WHERE userName='$userName' AND password='$password' AND user.isDeleted=0 ";
 $result = $connection->query($sql);
 if($result -> num_rows > 0){
     $row = $result ->fetch_assoc();
